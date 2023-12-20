@@ -67,7 +67,7 @@ class App {
     _setupBackground() {
         // 배경을 설정해주는 함수
         new RGBELoader().load(
-            "./backGround.hdr",
+            "backGround.hdr",
             (texture) => {
                 texture.mapping = THREE.EquirectangularReflectionMapping;
                 this._scene.background = texture; // 3차원 배경으로 사용
@@ -81,7 +81,7 @@ class App {
     _setupModel() {
         //캐릭터 모델을 불러오는 코드
         const gLoader = new GLTFLoader();
-        gLoader.load("./clicker.gltf", (gltf) => {
+        gLoader.load("https://github.com/Jeongin205/Web3D/blob/435ca1618468df75554405aeebccf94b528e0033/app/src/main/assets/model/clicker.gltf", (gltf) => {
             const model = gltf.scene;
             this._scene.add(model);
             // model.traverse((child) => {
